@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int** mat;
 
@@ -21,10 +23,11 @@ int main() {
     int n = 5;
     int m = 10;
 	mat = createMatrix(n,m);
-	freeMatrix(mat,n,m);
-
-    mat[5][10] = 0;   // fill two positions
+  
+    mat[4][9] = 0;   // fill two positions
     mat[0][0] = 0;
+
+  freeMatrix(mat,n,m);
 
 	return 0;
 }
